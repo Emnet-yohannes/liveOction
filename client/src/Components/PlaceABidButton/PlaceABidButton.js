@@ -1,5 +1,4 @@
 import React from 'react'
-import { useEffect } from "react";
 import { TextField, Grid, Box } from "@material-ui/core";
 
 import { Button } from "@material-ui/core";
@@ -11,15 +10,6 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 
 const PlaceABidButton = () => {
     const [open, setOpen] = React.useState(false);
-
-    const getAllFoodCategory = () => {
-        
-      };
-     useEffect(() => {
-       getAllFoodCategory()
-    
-     }, [])
-
 
      const handleClickOpen = () => {
         setOpen(true);
