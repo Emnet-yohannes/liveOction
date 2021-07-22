@@ -49,9 +49,9 @@ const FirstPage = () => {
 
     return (
 
-        <Box style={{ backgroundColor: "#eeeeee",position:"relative" }} >
+        <Box className={classes.mainContainer} >
             {/* <ArrowBackIcon style={{ marginBottom: "20px" }} /> */}
-            <div style={{ marginBottom: "80px" ,padding:"24px"}}>
+            <div className={classes.mainBody}>
 
                 <Card className={classes.root}>
                     <CardMedia
@@ -63,7 +63,7 @@ const FirstPage = () => {
                     />
                     <Grid container className={classes.font}>
                         <Grid item xs={6} sm={6} >
-                            <Box p={0.8} style={{ backgroundColor: "#1AEC5F", borderRadius: "16px", width: "80%", height: "55%", marginLeft: "10px" }}>
+                            <Box p={0.8} className={classes.timer}>
                                 {
                                 posts[0] &&
                                 <Countdown
@@ -74,7 +74,7 @@ const FirstPage = () => {
                                 
                             </Box>
                         </Grid>
-                        <Grid item xs={6} sm={6} style={{ width: "80%" }}>
+                        <Grid item xs={6} sm={6} className={classes.floatActionButtons}>
                             <div className={classes.root2}>
                                 <Avatar className={classes.kColorAvatar}>
                                     <FavoriteBorderIcon />
@@ -90,17 +90,17 @@ const FirstPage = () => {
                     </Grid >
                 </Card>
 
-                <Typography variant="h4" style={{ marginTop: "18px" }}>
+                <Typography variant="h4" className={classes.title}>
                     {posts[0] && posts[0].title}
                 </Typography>
-                <div style={{ display: "flex", marginTop: "10px" }}>
-                    <div style={{ height: "100%", marginRight: "10px" }}>
+                <div className={classes.profileContainer}>
+                    <div className={classes.profileAvatar}>
                         <Avatar src={Profile1} />
                     </div >
-                    <div style={{ flexDirection: "column" }}>
+                    <div className={classes.ownerContainer}>
 
                         <div>
-                            <Typography variant="subtitle2" style={{ color: "#555555" }}>
+                            <Typography variant="subtitle2" className={classes.ownerStatic}>
                                 Owner
                             </Typography>
                         </div>
@@ -111,10 +111,10 @@ const FirstPage = () => {
                         </div>
                     </div>
                 </div>
-                <Typography variant="h4" style={{ marginTop: "10px" }}>
+                <Typography variant="h4" className={classes.descriptionStatic}>
                     Description
                 </Typography>
-                <Typography variant="subtitle1" style={{ marginTop: "8px", color: "#555555" }}>
+                <Typography variant="subtitle1" className={classes.description}>
                     <ReadMore>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Nam a interdum quam. Phasellus et lobortis erat.
@@ -124,18 +124,18 @@ const FirstPage = () => {
 
                 </Typography>
             </div>
-            <Box p={3} style={{ position: "fixed", bottom: "0px", backgroundColor: "white", width: "100%", maxWidth: "400px", height: "50px" }}>
+            <Box p={3} className={classes.bottomContainer}>
 
-                <Typography variant="subtitle1" style={{ color: "#555555" }}>
+                <Typography variant="subtitle1" className={classes.currentBid}>
                     Current Bid
                 </Typography>
                 <Grid container >
                     <Grid items xs={6}>
-                        <Typography variant="h6" style={{ fontWeight: "bold", marginTop: "5px" }}>
+                        <Typography variant="h6" className={classes.amount}>
                             1.44 ETH
                         </Typography>
                     </Grid>
-                    <Grid items xs={6} style={{ textAlign: "center", width: "100%" }}>
+                    <Grid items xs={6} className={classes.placeAbid}>
                         <PlaceABidButton />
                     </Grid>
                 </Grid>
