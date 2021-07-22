@@ -1,14 +1,13 @@
 import React from 'react'
-import { useState,useEffect } from "react";
-import { TextField, Typography, Grid, Box, Container } from "@material-ui/core";
+import { useEffect } from "react";
+import { TextField, Grid, Box } from "@material-ui/core";
 
-import { Button, InputLabel, NativeSelect } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
-import AddIcon from "@material-ui/icons/Add";
 
 const PlaceABidButton = () => {
     const [open, setOpen] = React.useState(false);

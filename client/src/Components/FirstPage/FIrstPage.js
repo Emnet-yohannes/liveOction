@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
-import { Box,Typography, Card, CardMedia, Grid, Paper, Button } from '@material-ui/core'
-import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import { Box,Typography, Card, CardMedia, Grid } from '@material-ui/core'
 import Image1 from '../../static/image/background1.jpg';
 import Profile1 from '../../static/image/profile1.jpg'
 import useStyles from './styles';
@@ -9,14 +8,13 @@ import Countdown from 'react-countdown';
 import renderer from '../FirstPage/CountDown/CountDown';
 import Avatar from '@material-ui/core/Avatar';
 import PublishIcon from '@material-ui/icons/Publish';
-import PageviewIcon from '@material-ui/icons/Pageview';
 import FullscreenIcon from '@material-ui/icons/Fullscreen';
-import AssignmentIcon from '@material-ui/icons/Assignment';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import PlaceABidButton from '../PlaceABidButton/PlaceABidButton';
 
 
 const ReadMore = ({ children }) => {
+    console.log(process.env.REACT_APP_BACKEND_URL);
     const text = children;
     const [isReadMore, setIsReadMore] = useState(true);
     const toggleReadMore = () => {
@@ -39,7 +37,7 @@ const FirstPage = () => {
     const [posts, setPosts] = useState([]);
 
     const getPhoto = () => {
-        axios.get("http://localhost:5000/posts")
+        axios.get(process.env.REACT_APP_BACKEND_URL)
             .then((response) => {
                 console.log(response);
                 const fetcheddata = response.data;
