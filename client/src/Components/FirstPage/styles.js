@@ -1,5 +1,5 @@
 import { makeStyles } from "@material-ui/core";
-import { deepOrange, deepPurple, lightBlue } from '@material-ui/core/colors';
+import { deepOrange } from '@material-ui/core/colors';
 const useStyles = makeStyles((theme) => ({
   root: {
     position: "relative",

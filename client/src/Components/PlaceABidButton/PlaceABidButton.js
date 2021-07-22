@@ -11,9 +11,6 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 
 const PlaceABidButton = () => {
     const [open, setOpen] = React.useState(false);
-    const handleClick =()=>{
-
-    }
 
     const getAllFoodCategory = () => {
         
@@ -31,10 +28,6 @@ const PlaceABidButton = () => {
       const handleClose = () => {
         setOpen(false);
       };
-      const handleChange =(event)=>{
-        // setFoodCategory(event.target.value)
-        //console.log(foodCategory)
-      }
     
     return (
         <>

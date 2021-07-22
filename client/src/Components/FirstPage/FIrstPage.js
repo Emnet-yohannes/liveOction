@@ -14,7 +14,6 @@ import PlaceABidButton from '../PlaceABidButton/PlaceABidButton';
 
 
 const ReadMore = ({ children }) => {
-    console.log(process.env.REACT_APP_BACKEND_URL);
     const text = children;
     const [isReadMore, setIsReadMore] = useState(true);
     const toggleReadMore = () => {
@@ -47,13 +46,6 @@ const FirstPage = () => {
     useEffect(() => getPhoto(), []);
     // console.log(posts[0].coverImage)
     const classes = useStyles()
-    const defaultProps = {
-        bgcolor: 'background.paper',
-        borderColor: 'text.primary',
-        m: 1,
-        border: 1,
-        style: { width: '100%', height: '45rem' },
-    };
 
     return (
 
