@@ -66,18 +66,21 @@ const FirstPage = () => {
                 <Card className={classes.root}>
                     <CardMedia
                         component="img"
-                        alt="Bid Image"
+                        alt="Loading"
                         height="420"
                         image={posts[0] ? Image1 : "loading"}
-                        title="Bid Image"
+                        title="Loading"
                     />
                     <Grid container className={classes.font}>
                         <Grid item xs={6} sm={6} >
                             <Box p={0.8} style={{ backgroundColor: "#1AEC5F", borderRadius: "16px", width: "80%", height: "55%", marginLeft: "10px" }}>
+                                {
+                                posts[0] &&
                                 <Countdown
-                                    date={posts[0]?posts[0].deadLine:""}
+                                    date={posts[0] &&  new Date(posts[0].deadLine)}
                                     renderer={renderer}
                                 />
+                                }
                                 
                             </Box>
                         </Grid>
@@ -98,7 +101,7 @@ const FirstPage = () => {
                 </Card>
 
                 <Typography variant="h4" style={{ marginTop: "18px" }}>
-                    Abstract Liquid
+                    {posts[0] && posts[0].title}
                 </Typography>
                 <div style={{ display: "flex", marginTop: "10px" }}>
                     <div style={{ height: "100%", marginRight: "10px" }}>
